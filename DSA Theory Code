@@ -1,3 +1,86 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Stack<String> stack = new Stack<String>();
+        //System.out.println(stack.isEmpty());
+
+        stack.push("Witcher");
+        stack.push("Game Of Thrones");
+        stack.push("Stranger Things");
+        stack.push("Money Heist");
+        stack.push("Breaking Bad");
+
+        //stack.pop();
+
+        System.out.println(stack);
+        System.out.println(stack.peek());
+
+        Queue<Integer> queue = new LinkedList<Integer>();
+
+        //System.out.println(queue.isEmpty());
+
+        queue.offer(1);
+        queue.offer(2);
+        queue.offer(3);
+        queue.offer(4);
+        queue.offer(5);
+        queue.offer(6);
+
+        queue.poll();
+
+        System.out.println(queue);
+        System.out.println(queue.peek());
+        System.out.println(queue.size());
+        System.out.println(queue.contains(3));
+
+        //Queue<Double> gpa = new PriorityQueue<Double>();
+        Queue<Double> gpa = new PriorityQueue<Double>(Collections.reverseOrder());
+
+        gpa.offer(3.3);
+        gpa.offer(2.7);
+        gpa.offer(4.5);
+        gpa.offer(3.8);
+        gpa.offer(2.4);
+
+        //gpa.poll();
+
+        System.out.println(gpa);
+        System.out.println(gpa.peek());
+
+        LinkedList<String> linkedList = new LinkedList<String>();
+
+        /* Act as stack
+        linkedList.push("A");
+        linkedList.push("B");
+        linkedList.push("C");
+        linkedList.push("D");
+        linkedList.push("F");
+        */
+
+        // Act as queue
+        linkedList.offer("A");
+        linkedList.offer("B");
+        linkedList.offer("C");
+        linkedList.offer("D");
+        linkedList.offer("F");
+        //linkedList.poll();
+
+        linkedList.add(4, "E");
+        linkedList.remove("E");
+
+        linkedList.addFirst("0");
+        linkedList.addLast("G");
+        linkedList.removeFirst();
+        linkedList.removeLast();
+
+        System.out.println(linkedList);
+        System.out.println(linkedList.indexOf("F"));
+        System.out.println(linkedList.peekFirst());
+        System.out.println(linkedList.peekLast());
+    }
+}
+
 // Linear Search
 
 import java.io.*;
