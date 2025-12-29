@@ -345,3 +345,36 @@ public class Main {
         }
     }
 }
+
+// Insertion Sort
+
+public class Main {
+    public static void main(String[] args) {
+        int[] numbers = {9, 1, 8, 2, 7, 3, 6, 4, 5};
+
+        for (int num : numbers) {
+            System.out.print(num+" ");
+        }
+        System.out.println();
+
+        insertionSort(numbers);
+
+        for (int num : numbers) {
+            System.out.print(num+" ");
+        }
+    }
+
+    private static void insertionSort(int[] array) {
+
+        for (int i=1; i<array.length; i++) {
+            int temp = array[i];
+            int j = i-1;
+
+            while (j >= 0 && array[j] > temp) {
+                array[j+1] = array[j];
+                j--;
+            }
+            array[j+1] = temp;
+        }
+    }
+}
